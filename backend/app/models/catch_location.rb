@@ -1,4 +1,4 @@
 class CatchLocation < ApplicationRecord
-    belongs_to :locations
-    belongs_to :catches
+  belongs_to :catch
+  belongs_to :location
 end

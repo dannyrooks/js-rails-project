@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_17_014422) do
+ActiveRecord::Schema.define(version: 2020_05_17_155223) do
 
   create_table "catch_locations", force: :cascade do |t|
-    t.integer "catch_id"
-    t.integer "location_id"
+    t.integer "catch_id", null: false
+    t.integer "location_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["catch_id"], name: "index_catch_locations_on_catch_id"
@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 2020_05_17_014422) do
     t.string "city"
     t.string "state"
     t.string "description"
-    t.string "catch_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
