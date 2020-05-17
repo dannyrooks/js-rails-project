@@ -1,3 +1,4 @@
 class Location < ApplicationRecord
-    belongs_to :catch
+    has_many :catch_locations
+    has_many :catches, through: :catch_locations
 end
